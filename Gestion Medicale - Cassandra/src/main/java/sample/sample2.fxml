@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
+   <children>
+      <VBox prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <Text fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" text="Radiographies de  ">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" left="60.0" top="30.0" />
+               </VBox.margin>
+            </Text>
+            <HBox prefHeight="100.0" prefWidth="850.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="298.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sélectionnez une maladie:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <ComboBox fx:id="cb" onAction="#oncbselection" prefHeight="31.0" prefWidth="226.0" promptText="Maladie" />
+                     </children>
+                     <padding>
+                        <Insets left="30.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="100.0" prefWidth="430.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sélectionnez un intervalle de temps:">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <DatePicker fx:id="dpmin">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                              <DatePicker fx:id="dpmax">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                              <Button fx:id="btn" mnemonicParsing="false" onAction="#ondateselection" prefHeight="31.0" prefWidth="96.0" text="Go" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="100.0" prefWidth="474.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sélectionnez la radiographie à afficher:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <ComboBox fx:id="cb2" onAction="#onradioselection" prefHeight="31.0" prefWidth="254.0" promptText="Radiographie" />
+                     </children>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="436.0" prefWidth="1200.0">
+               <children>
+                  <TableView fx:id="tv" prefHeight="440.0" prefWidth="613.0">
+                    <columns>
+                        <TableColumn fx:id="c_id" prefWidth="75.0" text="Id" />
+                      <TableColumn fx:id="c_type" prefWidth="179.0" text="Type" />
+                      <TableColumn fx:id="c_date" minWidth="0.0" prefWidth="170.0" text="Date" />
+                        <TableColumn fx:id="c_medecin" prefWidth="192.0" text="Médecin traitant" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </TableView>
+                  <ImageView fx:id="image3" fitHeight="441.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="135.0" />
+                     </HBox.margin></ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

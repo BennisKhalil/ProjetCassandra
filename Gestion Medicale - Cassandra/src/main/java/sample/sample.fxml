@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" prefHeight="801.0" prefWidth="1190.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="801.0" prefWidth="1390.0">
+         <children>
+            <Text layoutX="98.0" layoutY="76.0" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des patients">
+               <font>
+                  <Font name="Calibri" size="50.0" />
+               </font>
+            </Text>
+            <VBox layoutY="122.0" prefHeight="680.0" prefWidth="1193.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="1106.0">
+                     <children>
+                        <VBox prefHeight="100.0" prefWidth="258.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sélectionnez  un patient:">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <ComboBox fx:id="cb" onAction="#oncbselection" prefHeight="31.0" prefWidth="253.0" promptText="Patient">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ComboBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="503.0">
+                           <HBox.margin>
+                              <Insets left="100.0" right="50.0" />
+                           </HBox.margin>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Choisissez un intervalle:">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox prefHeight="43.0" prefWidth="841.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <DatePicker fx:id="dpmin">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Au">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <DatePicker fx:id="dpmax">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                    <Button fx:id="btn" mnemonicParsing="false" onAction="#onbtnselection" prefHeight="31.0" prefWidth="71.0" text="Go">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="150.0" right="150.0" />
+                     </padding>
+                  </HBox>
+                  <VBox prefHeight="535.0" prefWidth="440.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom:" wrappingWidth="56.2421875">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date de naissance:" wrappingWidth="177.2421875">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro de téléphone:" wrappingWidth="212.2421875">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse:" wrappingWidth="212.2421875">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="188.0" prefWidth="242.0">
+                                 <children>
+                                    <Text fx:id="t_nom" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="220.2421875">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Text fx:id="t_datenaissance" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="210.2421875">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Text fx:id="t_telephone" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="215.2421875">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Text fx:id="t_adresse" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="230.2421875">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tv" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="c_maladie" minWidth="0.0" prefWidth="222.0" text="Maladie" />
+                              <TableColumn fx:id="c_medecin" prefWidth="253.0" text="Médecin traitant" />
+                            <TableColumn fx:id="c_dateins" prefWidth="213.0" text="Date d'ouverture du dossier" />
+                              <TableColumn fx:id="c_symptomes" prefWidth="384.0" text="Symptomes" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <Button fx:id="btnRadio" mnemonicParsing="false" onAction="#onradiobtnclick" prefHeight="31.0" prefWidth="234.0" text="Consulter les radiographies">
+                           <VBox.margin>
+                              <Insets left="850.0" top="30.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
